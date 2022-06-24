@@ -1,0 +1,20 @@
+{
+  "name": "odin-etch-a-sketch",
+  "version": "1.0.0",
+  "description": "A simple Etch-A-Sketch type of website that enables you to draw on a grid of X by X.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BitsuMamo/odin-etch-a-sketch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BitsuMamo/odin-etch-a-sketch/issues"
+  },
+  "homepage": "https://github.com/BitsuMamo/odin-etch-a-sketch#readme"
+}
