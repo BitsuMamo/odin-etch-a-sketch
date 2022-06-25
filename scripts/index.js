@@ -1,9 +1,10 @@
 const grid = document.getElementById("grid");
 const colorSelector = document.getElementById("color-input");
+const bgColorSelector = document.getElementById("bg-color-input");
 const clearBtn = document.getElementById("clear-btn");
 const gridSize = document.getElementById("grid-size")
 
-const defaultColor = "#FFE1EA";
+let defaultColor = "#FFE1EA";
 
 let ROW = gridSize.value;
 let COL = gridSize.value;
@@ -47,6 +48,11 @@ console.log(gridItems)
 
 colorSelector.addEventListener("change", () => {
   color = colorSelector.value;
+})
+
+bgColorSelector.addEventListener("change", () => {
+  defaultColor = bgColorSelector.value;
+  clearBtn.click();
 })
 
 clearBtn.addEventListener("click", () => {
