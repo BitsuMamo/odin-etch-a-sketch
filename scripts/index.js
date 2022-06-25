@@ -1,14 +1,17 @@
 const grid = document.getElementById("grid");
 const colorSelector = document.getElementById("color-input");
 const clearBtn = document.getElementById("clear-btn");
+const gridSize = document.getElementById("grid-size")
 
 const defaultColor = "#FFE1EA";
 
-const ROW = 30;
-const COL = 30
+let ROW = gridSize.value;
+let COL = gridSize.value;
+
+
 let color = 'black'
 
-const SIDE = grid.clientWidth / ROW;
+let SIDE = grid.clientWidth / ROW;
 console.log(SIDE)
 
 
@@ -29,15 +32,15 @@ function createGridItem(sideLength) {
 }
 
 
-function createGrid() {
+function createGrid(side) {
   let i = ROW * COL;
   while (i != 0) {
-    createGridItem(SIDE);
+    createGridItem(side);
     i--;
   }
 }
 
-createGrid();
+createGrid(SIDE);
 
 const gridItems = document.getElementsByClassName("grid-item");
 console.log(gridItems)
@@ -53,4 +56,14 @@ clearBtn.addEventListener("click", () => {
 })
 
 
+gridSize.addEventListener("change", () => {
+  ROW = gridSize.value;
+  COL = gridSize.value;
 
+  SIDE = grid.clientWidth / ROW;
+
+  grid.innerHTML = "";
+
+  createGrid(SIDE)
+
+})

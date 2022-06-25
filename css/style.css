@@ -80,3 +80,14 @@ body{
   background-color: white;
   color: #001514;
 }
+
+#gird-size{
+  color: #FFA0FD;
+}
+
+.grid-size-values{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
